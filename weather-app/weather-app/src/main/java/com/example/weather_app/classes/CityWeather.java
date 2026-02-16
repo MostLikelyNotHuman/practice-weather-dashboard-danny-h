@@ -143,8 +143,7 @@ public class CityWeather {
 
     @Override
     public String toString() {
-        String description = (weather != null && !weather.isEmpty()) ? weather.get(0).get("description").toString() : "N/A";
-        return "The current weather is " + description + " with a temperature of " + getTemperatureInFahrenheit() + " degrees Fahrenheit.";
+        return "The current weather is " + weather.get(0).get("description") + " with a temperature of " + getTemperatureInFahrenheit() + " degrees Fahrenheit and a humidity of " + main.get("humidity") + "%.";
     }
 }
 
